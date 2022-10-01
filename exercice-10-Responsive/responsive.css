@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+}
+
+.main {
+    background-color: rgb(21, 108, 38);
+    color: white;
+    display: flex;
+    width: 100vw;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: auto;
+    margin: auto;
+    flex-grow: inherit;
+    border-left: 0.2rem solid gray;
+}
+
+.contenedor {
+    background-color: orange;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.divisor {
+    border-bottom: 0.2rem solid gray;
+}
+
+@media (max-width: 640px) {
+    body {
+        flex-direction: column-reverse;
+    }
+    .contenedor {
+        flex-direction: row;
+    }
+    .divisor {
+        border-bottom: none;
+        border-right: 0.2rem solid gray;
+    }
+    .main {
+        border-left: none;
+        border-bottom: 0.2rem solid gray;
+    }
+}
